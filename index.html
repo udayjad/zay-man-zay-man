@@ -98,18 +98,10 @@
       position:absolute; inset:95px 58px; background:#12101a; border:4px solid #000; box-shadow:12px 12px 0 var(--red);
       display:grid; place-items:center; transform:rotate(2deg); overflow:hidden;
     }
-    .mask{
-      width:170px; height:115px; background:var(--purple); border:8px solid #000; border-radius:50% 50% 44% 44%;
-      position:relative; transform:rotate(-3deg);
+    .hero-gif{
+      width:100%; height:100%; object-fit:cover; display:block;
+      image-rendering:auto;
     }
-    .mask:before,.mask:after{
-      content:""; position:absolute; top:34px; width:44px; height:26px; background:#fff; border:6px solid #000;
-      border-radius:70% 30% 60% 40%;
-    }
-    .mask:before{left:23px; transform:rotate(7deg)}
-    .mask:after{right:23px; transform:scaleX(-1) rotate(7deg)}
-    .cape{position:absolute; width:230px; height:220px; background:var(--red); top:245px; left:50%; transform:translateX(-50%) rotate(3deg); clip-path:polygon(20% 0,80% 0,100% 100%,50% 80%,0 100%)}
-    .chest{position:absolute; top:250px; left:50%; transform:translateX(-50%); font:900 72px/1 Impact,sans-serif; color:var(--yellow); text-shadow:5px 5px 0 #000; z-index:2}
     .cat-orbit{position:absolute; font-size:52px; animation:orbit 6s linear infinite}
     .cat-orbit.c1{top:55px; right:15px}.cat-orbit.c2{bottom:24px; left:8px; animation-delay:-3s}
     @keyframes orbit{50%{transform:translateY(-20px) rotate(14deg)}}
@@ -208,7 +200,7 @@
       <h1 class="warning">⚠ WARNING ⚠</h1>
       <p><strong>This page contains dangerously high levels of Zay-Man.</strong></p>
       <div class="meter"><span></span></div>
-      <p>Known side effects include spontaneous cat deployment, impossible power readings, and severe fried-chicken incidents.</p>
+      <p>Known side effects include spontaneous cat deployment, impossible power readings, and severe halwa-puri incidents.</p>
       <button class="btn red" id="enterBtn">Enter at your own risk</button>
       <small>Birthday clearance required. Common sense optional.</small>
     </div>
@@ -219,7 +211,7 @@
       <div>
         <span class="eyebrow">Birthday Protocol Activated</span>
         <h1 class="comic-title">ZAY<span class="accent">-MAN</span></h1>
-        <p class="lead">Karachi’s most suspiciously overpowered superhero. Protector of cats. Destroyer of fried chicken. Somehow allowed another birthday.</p>
+        <p class="lead">Karachi’s most suspiciously overpowered superhero. Protector of cats. Destroyer of halwa puri. Somehow allowed another birthday.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
           <a href="#profile"><button class="btn">Open Classified File ↓</button></a>
           <a href="#surprise"><button class="btn alt">Emergency Surprise Box</button></a>
@@ -229,9 +221,7 @@
         <div class="burst"></div>
         <div class="hero-card">
           <div class="cat-orbit c1">🐈</div><div class="cat-orbit c2">🐈‍⬛</div>
-          <div class="mask"></div>
-          <div class="cape"></div>
-          <div class="chest">Z</div>
+          <img class="hero-gif" src="assets/zayman-cat.gif" alt="Cat enthusiastically typing on a laptop">
         </div>
       </div>
     </div>
@@ -255,13 +245,13 @@
             <h3>Abilities</h3>
             <div class="stat"><b>Super Strength</b><span>✓</span></div>
             <div class="stat"><b>Teleportation</b><span>✓</span></div>
-            <div class="stat"><b>Cat Summoning</b><span>✓✓✓</span></div>
+            <div class="stat"><b>Saving People</b><span>✓✓✓</span></div>
             <div class="stat"><b>Plot Armor</b><span>100%</span></div>
           </article>
           <article class="panel">
             <h3>Critical Data</h3>
             <div class="stat"><b>Weakness</b><span>Cats</span></div>
-            <div class="stat"><b>Other Weakness</b><span>Fried Chicken</span></div>
+            <div class="stat"><b>Other Weakness</b><span>Halwa Puri</span></div>
             <div class="stat"><b>Threat Level</b><span>Unnecessary</span></div>
             <div class="stat"><b>Vibe</b><span>Immaculate</span></div>
           </article>
@@ -317,7 +307,7 @@ Authentication required: ZAY-MAN clearance.</div>
       <div class="wrap">
         <div class="mission">MISSION STATUS: SUCCESS</div>
         <h2>Happy Birthday<br><span style="color:var(--yellow)">Zay-Man!</span></h2>
-        <p>May your year contain unreasonable amounts of happiness, excellent people, cats, and fried chicken.</p>
+        <p>May your year contain unreasonable amounts of happiness, excellent people, cats, and halwa puri.</p>
         <button class="btn red" id="finaleBtn">Activate Birthday Overdrive</button>
       </div>
     </section>
@@ -348,7 +338,7 @@ Last year I got to know that I can't maybe directly give you a physical gift due
 
     const ZAYMAN_TRANSLATION = `CLASSIFIED HEROIC TRANSLATION:
 
-On this historic day, the universe once again acknowledges the arrival of ZAY-MAN — Guardian of Karachi, Commander of Cats, Master of Every Known Superpower, and Unchallenged Destroyer of Fried Chicken.
+On this historic day, the universe once again acknowledges the arrival of ZAY-MAN — Guardian of Karachi, Commander of Cats, Master of Every Known Superpower, and Unchallenged Destroyer of Halwa Puri.
 
 May his next orbit around the sun be filled with legendary adventures, loyal allies, impossible victories, and enough happiness to exceed even his completely unreasonable power level.
 
@@ -356,10 +346,10 @@ HAPPY BIRTHDAY, ZAY-MAN. THE CITY SURVIVES ANOTHER YEAR.`;
 
     const powers = [
       ["💪","Super Strength","Capable of lifting responsibilities. Rarely demonstrated."],
-      ["⚡","Lightning Speed","Mostly activated when fried chicken is nearby."],
+      ["⚡","Lightning Speed","Mostly activated when halwa puri is nearby."],
       ["🌀","Teleportation","Useful for escaping awkward conversations."],
-      ["🐈","Unlimited Cat Summoning","Scientists requested that he stop testing this indoors."],
-      ["🍗","Fried Chicken Detection","Effective radius: several suspicious kilometers."],
+      ["🐈","Unlimited Saving People","Scientists requested that he stop testing this indoors."],
+      ["🍽️","Halwa Puri Detection","Effective radius: several suspicious kilometers."],
       ["🚦","Karachi Traffic Survival","Classified as an S-tier superpower."],
       ["🛡️","Plot Armor","Damage resistance: offensively high."],
       ["♾️","EVERY POWER","Scanner error. Power level exceeds legal limits."]
@@ -418,7 +408,7 @@ HAPPY BIRTHDAY, ZAY-MAN. THE CITY SURVIVES ANOTHER YEAR.`;
 
     function chaos(originEl, amount=34){
       const rect=originEl.getBoundingClientRect();
-      const icons=["🐈","🐈‍⬛","😸","😻","🍗","🍗","🐾","✨"];
+      const icons=["🐈","🐈‍⬛","😸","😻","🫓","🍛","🐾","✨"];
       for(let i=0;i<amount;i++){
         const e=document.createElement("div");
         e.className="floaty";
@@ -482,7 +472,7 @@ HAPPY BIRTHDAY, ZAY-MAN. THE CITY SURVIVES ANOTHER YEAR.`;
     $("#finaleBtn").addEventListener("click",()=>{
       confettiBurst(180);
       chaos($("#finaleBtn"),40);
-      showToast("HAPPY BIRTHDAY, ZAY-MAN 🐈🍗⚡");
+      showToast("HAPPY BIRTHDAY, ZAY-MAN 🐈🍽️⚡");
     });
   </script>
 </body>
